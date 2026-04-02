@@ -1,4 +1,4 @@
-package org.example.oop.Inheritance;
+package org.example.oop.developeremployeemanager;
 
 public class Employee {
     String name;
