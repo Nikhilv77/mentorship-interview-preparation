@@ -153,6 +153,61 @@ Concepts:
 
 ---
 
+### Binary Tree
+
+Problems solved:
+
+1. 226. Invert Binary Tree
+2. 104. Maximum Depth of Binary Tree
+3. 100. Same Tree
+4. 101. Symmetric Tree
+
+Key questions:
+
+- How does recursion work in tree problems?
+- What is the base case in a binary tree?
+- How do you traverse a tree (DFS)?
+- How do you compare two trees?
+- How to identify mirror/symmetric structures?
+
+Concepts:
+
+- Tree traversal (DFS)
+- Recursion
+- Divide and conquer
+- Tree comparison
+- Structural properties of trees
+
+---
+
+### Array / Searching
+
+Problems solved:
+
+1. 704. Binary Search
+2. 268. Missing Number
+3. 121. Best Time to Buy and Sell Stock
+4. 169. Majority Element
+5. 53. Maximum Subarray
+
+Key questions:
+
+- When can binary search be applied?
+- How to optimize brute force to O(n)?
+- How to track min/max efficiently in one pass?
+- What is Kadane’s Algorithm?
+- How do you use math or patterns to avoid extra space?
+
+Concepts:
+
+- Binary Search
+- Prefix/Sum patterns
+- Kadane’s Algorithm
+- Greedy approach
+- Array traversal optimization
+
+---
+
 ## OOP Practice
 
 ### Classes & Objects
@@ -249,8 +304,62 @@ Concepts:
 * Extensibility
 
 ---
+### Abstraction (Interface): Payment Checkout Gateway
 
-## Notes for Revision
+#### Implementation:
+
+- Interface: `PaymentProcessor`
+- Method:
+    - `void pay(double amount)`
+- Implementing classes:
+    - `CreditCardPayment`
+    - `UPIPayment`
+- Main class:
+    - Use `PaymentProcessor` reference to execute payments
+
+---
+
+#### Behavior:
+
+- Both classes provide their own implementation of `pay()`
+- Same method call behaves differently based on object type
+- Object is assigned at runtime:
+    - `new CreditCardPayment()`
+    - `new UPIPayment()`
+
+---
+
+#### Questions:
+
+- What is abstraction in Java?
+- What is an interface and why is it used?
+- How does Java achieve runtime polymorphism using interfaces?
+- Why use an interface reference instead of concrete classes?
+- What happens if a class does not implement all interface methods?
+
+---
+
+#### Concepts:
+
+- Abstraction (hiding implementation details)
+- Interface as a contract
+- Runtime polymorphism
+- Loose coupling
+- Code scalability and extensibility
+
+---
+
+#### Example Flow:
+
+PaymentProcessor payment;
+
+payment = new CreditCardPayment();
+payment.pay(1000);
+
+payment = new UPIPayment();
+payment.pay(1500);
+
+### Notes for Revision
 
 * Prefer solving problems by pattern, not by memorization
 * Always analyze time and space complexity
